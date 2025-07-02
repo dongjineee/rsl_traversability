@@ -1,0 +1,6 @@
+[submodule "traversability_estimation"]
+	path = traversability_estimation
+	url = https://github.com/dongjineee/traversability_estimation
+[submodule "elevation_mapping"]
+	path = elevation_mapping
+	url = https://github.com/dongjineee/elevation_mapping
