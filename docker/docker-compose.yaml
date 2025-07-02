@@ -1,0 +1,18 @@
+services:
+  rsl_travel:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: dev
+    image: dongjineee/rsl_travel:00
+    stdin_open: true
+    tty: true
+    network_mode: "host"
+    volumes:
+      - ../elevation_mapping:/root/rsl_travel_ws/src/elevation_mapping
+      - ../traversability_estimation:/root/rsl_travel_ws/src/traversability_estimation
+      
+    environment:
+      - ROS_IP=127.0.0.1
+    command: "/bin/bash"
+    shm_size: 128M
